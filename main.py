@@ -26,14 +26,14 @@ def average(data: list) -> float:
         total_sum += number
         
     #Calculate average
-    return total_sum/len(data)
+    new_number = total_sum/len(data)
+    return f"{new_number:.2f}"
     
-    print(average(file_object))
 
 file_object = open("/Users/sarahnalepa/Desktop/TKH/Labs/hr_data_pipeline/Heart-Rate-Data-Analysis/data/phase0.txt")
 readData = file_object.readlines()
-
-print(clean_heartrate_data(readData))
+clean_data = clean_heartrate_data(readData)
+print(average(clean_data))
 
 # def median(data: list) -> float:
 #    #Sort data in order
