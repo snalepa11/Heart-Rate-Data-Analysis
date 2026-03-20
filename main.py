@@ -30,37 +30,42 @@ def average(data: list) -> float:
     return f"{new_number:.2f}"
     
 
+
+
+def median(data: list) -> float:
+   #Sort data in order
+    data.sort()
+    #find the length of the list 
+    list_length = len(data)
+   #assign median index to variable
+    index = list_length / 2
+    index = int(index)
+    if list_length % 2 == 0: 
+        my_median = (data[index - 1] + data[index]) / 2
+        
+    else:
+        my_median = data[index]
+   #find the middle number 
+    return my_median
+
+
+def range(data: list) -> float:
+   #find min value 
+    data.sort()
+    max_value = None 
+    for number in data :
+        if max_value == None or number > max_value:
+            max_value = number
+    my_range = max_value - data[0]
+    return my_range 
+
+
 file_object = open("/Users/sarahnalepa/Desktop/TKH/Labs/hr_data_pipeline/Heart-Rate-Data-Analysis/data/phase0.txt")
 readData = file_object.readlines()
 clean_data = clean_heartrate_data(readData)
-print(average(clean_data))
-
-# def median(data: list) -> float:
-#    #Sort data in order
-#    data.sort()
-#     #find the length of the list 
-#    list_length = len(data)
-#    #assign median index to variable
-#    index = list_length/2
-#    if list_length % 2 == 0: 
-#        my_median = (data[index - 1] + data[index]) / 2
-        
-#     else 
-#         my_median = data[index]
-#    #find the middle number 
-#    return my_median
-
-
-
-
-
-# def range(data: list) -> float:
-#    #find min value 
-#    data.sort()
-#     max_value = max(data)
-#     my_range = data(max_value) - data[0]
-#    return my_range 
-
+data_average = average(clean_data)
+data_median = median(clean_data)
+print(range(clean_data))
 
 # def rolling_avg(data: list, k: int) -> float:
 #     """
