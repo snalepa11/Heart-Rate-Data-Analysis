@@ -94,7 +94,7 @@ def run(file: str):
     data_average = average(clean_data)
     data_median = median(clean_data)
     data_range = range(clean_data)
-    print(range(clean_data))
+   
 
 #     # print out your data quality measure to the console
     print(clean_data)
