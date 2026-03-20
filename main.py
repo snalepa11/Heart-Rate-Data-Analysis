@@ -50,12 +50,14 @@ def median(data: list) -> float:
 
 
 def range(data: list) -> float:
-   #find min value 
+   #sort the data from least to greatest value
     data.sort()
     max_value = None 
+    #for loop finding the max value by looping through all munbers
     for number in data :
         if max_value == None or number > max_value:
             max_value = number
+    #find range by subtracting first index in list by the max value
     my_range = max_value - data[0]
     return my_range 
 
