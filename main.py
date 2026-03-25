@@ -1,6 +1,8 @@
+
+import cleaner 
+import statistical 
 import statistics as stats
-from cleaner import clean_heartrate_data
-import statistical
+
 
 def run(file: str):
     """
@@ -22,19 +24,21 @@ def run(file: str):
 #     average(data)
 #     median(data)
 #     range(data)
-    clean_data = clean_heartrate_data(readData)
+    clean_data = cleaner.clean_heartrate_data(readData)
     data_average = statistical.average(clean_data)
     data_median = statistical.median(clean_data)
     data_range = statistical.range(clean_data)
+    data_variance = statistical.variance(clean_data)
    
 
 #     # print out your data quality measure to the console
-    print(clean_data)
+    print(f"Cleaned data: {clean_data}")
 #     # print out your descriptive statistics to the console
 #     print(average, median, range)
-    print(data_range)
-    print(data_median)
-    print(data_average)
+    print(f"Data range: {data_range}")
+    print(f"Data median: {data_median}")
+    print(f"Data mean: {data_average}")
+    print(f"Data variance: {data_variance}")
 
 if __name__ == "__main__":
     run("data/phase0.txt")

@@ -1,6 +1,9 @@
 import statistics as stats
 
-# def variance(data:list) -> float:
+def variance(data:list) -> float:
+    data_var = stats.variance(data)
+    return f"{data_var:.2f}"
+
 
 def average(data: list) -> float:
     total_sum = 0
@@ -13,7 +16,6 @@ def average(data: list) -> float:
     new_number = total_sum/len(data)
     return f"{new_number:.2f}"
     
-
 
 
 def median(data: list) -> float:

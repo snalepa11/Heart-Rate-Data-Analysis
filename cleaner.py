@@ -1,3 +1,4 @@
+
 def clean_heartrate_data(data: list) -> tuple:
     # print(data)
     cleaned_list = []
