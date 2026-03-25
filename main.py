@@ -1,3 +1,6 @@
+import statistics as stats
+import cleaner
+import statistical
 
 def run(file: str):
     """
@@ -19,10 +22,10 @@ def run(file: str):
 #     average(data)
 #     median(data)
 #     range(data)
-    clean_data = clean_heartrate_data(readData)
-    data_average = average(clean_data)
-    data_median = median(clean_data)
-    data_range = range(clean_data)
+    clean_data = cleaner.clean_heartrate_data(readData)
+    data_average = statistical.average(clean_data)
+    data_median = statistical.median(clean_data)
+    data_range = statistical.range(clean_data)
    
 
 #     # print out your data quality measure to the console
