@@ -1,3 +1,7 @@
+import statistics as stats
+
+# def variance(data:list) -> float:
+
 def average(data: list) -> float:
     total_sum = 0
    

@@ -1,5 +1,5 @@
 import statistics as stats
-import cleaner
+from cleaner import clean_heartrate_data
 import statistical
 
 def run(file: str):
@@ -22,7 +22,7 @@ def run(file: str):
 #     average(data)
 #     median(data)
 #     range(data)
-    clean_data = cleaner.clean_heartrate_data(readData)
+    clean_data = clean_heartrate_data(readData)
     data_average = statistical.average(clean_data)
     data_median = statistical.median(clean_data)
     data_range = statistical.range(clean_data)
