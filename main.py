@@ -1,7 +1,8 @@
 
 import cleaner 
-import statistical 
+import statistical
 import statistics as stats
+import graph
 
 
 def run(file: str):
@@ -25,10 +26,13 @@ def run(file: str):
 #     median(data)
 #     range(data)
     clean_data = cleaner.clean_heartrate_data(readData)
+    data_graph = graph.lineplot(clean_data)
+
     data_average = statistical.average(clean_data)
     data_median = statistical.median(clean_data)
     data_range = statistical.range(clean_data)
     data_variance = statistical.variance(clean_data)
+   
    
 
 #     # print out your data quality measure to the console
@@ -39,6 +43,7 @@ def run(file: str):
     print(f"Data median: {data_median}")
     print(f"Data mean: {data_average}")
     print(f"Data variance: {data_variance}")
+    
 
 if __name__ == "__main__":
     run("data/phase0.txt")

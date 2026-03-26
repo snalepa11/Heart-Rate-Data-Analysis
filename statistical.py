@@ -1,5 +1,6 @@
 import statistics as stats
 
+
 def variance(data:list) -> float:
     data_var = stats.variance(data)
     return f"{data_var:.2f}"
@@ -46,6 +47,8 @@ def range(data: list) -> float:
     #find range by subtracting first index in list by the max value
     my_range = max_value - data[0]
     return my_range 
+
+
 
 
 
